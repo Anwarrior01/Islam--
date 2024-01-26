@@ -1,13 +1,128 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* --body-background : #0E0E0E;
+    --body-color : white; */
+
+  /* hero and navbar */
+  --navbar-bg: white;
+  --navbar-color: #0e0e0e;
+  --hero-bg: url("C:\project_salaat\src\pics\dhuhr-prayer-mosque-muslim-praying-morning-su-upscaled.png");
+  --hero-info-color: #ffffff;
+  --hero-info-span-color: #ecb46f;
+  /* salaat Times */
+  --salaat-bg: url("C:\project_salaat\src\pics\Salaat-Timer-bgs\78824.jpg"),
+    linear-gradient(45deg, #fff6bb 0% 30%, #fffad7 90% 100%);
+  --salaat-bg-blendMode: multiply;
+  --salaat-info: #666666;
+  /* prayer card */
+  --prayer-bg: white;
+  --prayer-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  --prayer-info1: #4a4a4a;
+  --prayer-info2: #585858;
+  /* city selection  */
+  --select-border: #666666;
+  --select-color: #666666;
+  --select-bg: transparent;
+  --select-place-info: #3c3c3c;
+  --select-label: #4a4a4a;
+  --button-color: #2f2f2f;
+  --button-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  --button-hover-color: white;
+  --button-hover-bg: #232323;
+  --button-hover-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+  /* Hadeeth Sectionn  */
+  --hadeeth-bg: url("C:\project_salaat\src\pics\hero Bgs\Light\bg2.png"),
+    linear-gradient(45deg, #f4f0d0 0% 30%, #fbf5c9 10% 70%);
+  --hadeeth-bg-blendMode: overlay;
+  --hadeeth-info: #666666;
+  --swipper-border: 2px solid #666666;
+  --hadeeth-text-color: #666666;
+  --hadeeth-subtext-color: #4a4a4a;
+  /* Quran Sectionn  */
+  --quran-bg: url("C:\project_salaat\src\pics\body bgs\Light\1.png"),
+    linear-gradient(
+      45deg,
+      rgba(244, 240, 208, 0.7) 0% 50%,
+      rgba(251, 245, 201, 0.9) 60% 90%
+    );
+  --quran-bg-blendMode: overlay;
+  --quran-info: #666666;
+  --quran-button: 2px solid #666666;
+  --quran-button-color: #2f2f2f;
+  --quran-button-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+  /* Quran Display Sectionn  */
+  --quran-display-bg:  url("C:\project_salaat\src\pics\body bgs\Light\5.png"),
+  linear-gradient(45deg, rgba(255, 247, 190, 0.6) 0% 70%, rgba(255, 246, 182, 0.6) 10% 70%);
+  --quran-bg-blendMode: overlay;
+  --quran-display-border: 2px solid #666666;
+  --quran-display-color: #2f2f2f;
+  --quran-display-font: 'Amiri Quran';
+  --quran-display-scrollbarbg: transparent;
+  --quran-display-scrollbar-piece: #666666;
+  --quran-display-scrollbar-piece-track: rgba(237, 242, 250, 0.253)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+
+
+body[data-theme="dark"] {
+  /* --body-background : white;
+    --body-color : #0e0e0e; */
+  /* hero and navbar */
+  --navbar-bg: #0f1013;
+  --navbar-color: white;
+  --hero-bg: url("C:\project_salaat\src\pics\hero Bgs\Dark\bg7.png");
+  --hero-info-color: #ffffff;
+  --hero-info-span-color: #14697a;
+  /* salaat Times */
+  --salaat-bg: url("C:\project_salaat\src\pics\Salaat-Timer-bgs\dark\81291.jpg"),
+    linear-gradient(45deg, #332971 0% 30%, #46399c 90% 100%);
+  --salaat-bg-blendMode: hard-light;
+  --salaat-info: #edf2fa;
+  /* prayer card */
+  --prayer-bg: #0d0a1c;
+  --prayer-shadow: 0px 5px 20px rgba(255, 255, 255, 0.2);
+  --prayer-info1: #edf2fa;
+  --prayer-info2: #edf2fa;
+
+  /* city selection  */
+  --select-border: #edf2fa;
+  --select-color: #edf2fa;
+  --select-bg: transparent;
+  --select-place-info: #edf2fa;
+  --select-label: #edf2fa;
+  --button-color: #edf2fa;
+  --button-shadow: 0px 5px 20px rgba(255, 255, 255, 0.2);
+  --button-hover-color: #0d0a1c;
+  --button-hover-bg: #edf2fa;
+  --button-hover-shadow: 0px 0px 50px rgba(255, 255, 255, 0.8);
+  /* Hadeeth Sectionn  */
+  --hadeeth-bg: url("C:\project_salaat\src\pics\hero Bgs\Dark\ishaa-prayer-mosque-muslim-praying-shiny-nig-upscaled.png"),
+    linear-gradient(45deg, #332971 0% 30%, #46399c 90% 100%);
+  --hadeeth-bg-blendMode: multiply;
+  --hadeeth-info: #edf2fa;
+  --swipper-border: 1px solid #edf2fa;
+  --hadeeth-text-color: #edf2fa;
+  --hadeeth-subtext-color: white;
+  /* Quran Sectionn  */
+  --quran-bg: url('C:\project_salaat\src\pics\body bgs\Light\1.png') ,linear-gradient(45deg, #231b58 0% 30%, #2e2379 90% 100%);
+  --quran-bg-blendMode: multiply;
+  --quran-info: #edf2fa;
+  --quran-button: 2px solid #edf2fa;
+  --quran-button-color: white;
+  --quran-button-shadow: 0px 5px 20px rgba(255, 255, 255, 0.4);
+  /* Quran Display Sectionn  */
+  --quran-display-bg:  url("C:\project_salaat\src\pics\hero Bgs\Dark\fajr-prayer-mosque-muslim-praying-dark-5am-mo-upscaled.png"),
+  linear-gradient(45deg, #241c58 0% 30%, #2d2371 90% 100%);
+  --quran-bg-blendMode: multiply;
+  --quran-display-border: 2px solid #edf2fa;
+  --quran-display-color: #edf2fa;
+  --quran-display-font: 'Amiri';
+  --quran-display-scrollbarbg: transparent;
+  --quran-display-scrollbar-piece: #edf2fa;
+  --quran-display-scrollbar-piece-track: #edf2fa1d;
 }
