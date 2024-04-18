@@ -13,9 +13,9 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const handleSignup = () => {
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .then(() => {
         signInWithEmailAndPassword(auth, email, password)
-          .then((signInCredential) => {
+          .then(() => {
             updateProfile(auth.currentUser, { displayName: username })
               .then(() => {
                 console.log("User profile updated.");

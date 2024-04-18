@@ -14,6 +14,7 @@ import { useEffect, useRef } from "react";
 import { auth } from "./firebase";
 import { loginUser, setLoading } from "./features/userSlice";
 import { BrowserRouter , Route,  Routes } from "react-router-dom";
+import Loader from "./components/Loader";
 
 
 function App() {
@@ -34,11 +35,12 @@ function App() {
         dispatch(setLoading(false))
       }else{
         console.log("User is not Logged in")
+        dispatch(setLoading(false));
       }
     })
   },[])
   const user = useSelector((state) => state.data.user.user);
-  const isLoading = false;
+  const isLoading = useSelector((state) => state.data.user.isLoading);
   console.log(user)
   return (
     <div className="app">
@@ -50,9 +52,7 @@ function App() {
         </Routes>
       </BrowserRouter> */}
       {isLoading ? (
-        <div class="loader-container">
-          <div class="loader"></div>
-        </div>
+       <Loader />
       ) : user ? (
         <>
           {/* <Chat /> */}

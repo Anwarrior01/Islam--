@@ -94,10 +94,12 @@ export default function NavBar() {
             <DarkMode className={"test"} />
           </div>
           <div className="flex flex-col justify-around items-center gap-2">
-            <Avatar>{user.username[0]}</Avatar>
+            <Avatar>
+             { !isLoading && user.username.charAt(0).toUpperCase().toString()}
+            </Avatar>
             <span>{user.username}</span>
           </div>
-        
+
           <img src={logoLight} width={"110rem"} className="my-8 mx-auto" />
         </div>
       </div>
