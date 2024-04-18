@@ -168,7 +168,7 @@ export default function MainContent() {
     const nextPrayerObject = prayersArray[prayerIndex]
     const nextPrayerTime = timings[nextPrayerObject.key]
     const nextPrayerTimeMoment = moment(nextPrayerTime,"hh:mm ") 
-    console.log("next prayer time is " ,nextPrayerTime)
+    // console.log("next prayer time is " ,nextPrayerTime)
     let remainingTime = moment(nextPrayerTime,"hh:mm").diff(momentNow)
     if(remainingTime < 0){
       const midNightdiff = moment("23:59:59","hh:mm:ss").diff(momentNow)
@@ -218,10 +218,13 @@ export default function MainContent() {
   useEffect(() => {
     loadCountries();
     loadStates();
-    loadCities();
+    
 
     // setDataC(countryData && countryData.find((c) => c.name === selectedCountry));
   }, [countryData]);
+  useEffect(()=>{
+    loadCities();
+  },[stateData])
   useEffect(() => {
     const interval = setInterval(() => {
       getTime();
@@ -245,7 +248,7 @@ export default function MainContent() {
   return (
     <>
   
-      <div className="times-container">
+      <div className="times-container" id="salaat">
         {/* Header Informations  */}
 
         <Grid container>
