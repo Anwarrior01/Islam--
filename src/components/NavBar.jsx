@@ -95,9 +95,12 @@ export default function NavBar() {
           </div>
           <div className="flex flex-col justify-around items-center gap-2">
             <Avatar>
-             { !isLoading && user.username.charAt(0).toUpperCase().toString()}
+              {!isLoading && user.username
+                ? user.username.charAt(0).toUpperCase()
+                : "A"}{" "}
             </Avatar>
-            <span>{user.username}</span>
+
+            <span>{(!isLoading && user.username )? user.username : 'Anwar'}</span>
           </div>
 
           <img src={logoLight} width={"110rem"} className="my-8 mx-auto" />

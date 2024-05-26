@@ -17,7 +17,7 @@ export default function Hero() {
             <span className="slider__word">  مواعيد الصلاة</span>
             <span className="slider__word">  قران</span>
             <span className="slider__word">  حديث و سنة</span>
-            <span className="slider__word">  محاضرات</span>
+            <span className="slider__word">  تفسير</span>
           </span>
         </h2>
        </div>
@@ -29,7 +29,7 @@ export default function Hero() {
             <span className="slider__word">Salaat Timer</span>
             <span className="slider__word">Holy Quran</span>
             <span className="slider__word">Hadeeth</span>
-            <span className="slider__word"> Lectures</span>
+            <span className="slider__word"> Tafseer</span>
           </span>
         </h2>
        </div>
