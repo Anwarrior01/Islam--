@@ -9,7 +9,7 @@
   /* hero and navbar */
   --navbar-bg: #fefdf2;
   --navbar-color: #2f2f2f;
-  --hero-bg: url("C:\project_salaat\src\pics\muslimBG.png");
+  --hero-bg: url("./pics/muslimBG.png");
   --hero-info-color: #ffffff;
   --hero-info-span-color: #ecb46f;
   /* salaat Times */
