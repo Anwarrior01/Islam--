@@ -79,7 +79,7 @@ body[data-theme="dark"] {
   --hero-info-color: #ffffff;
   --hero-info-span-color: #14697a;
   /* salaat Times */
-  --salaat-bg: url("./pics/Salaat-Timer-bgs\dark\81291.jpg"),
+  --salaat-bg: url("./pics/Salaat-Timer-bgs/dark/81291.jpg"),
     linear-gradient(45deg, #332971 0% 30%, #46399c 90% 100%);
   --salaat-bg-blendMode: hard-light;
   --salaat-info: #edf2fa;
